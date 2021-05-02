@@ -26,7 +26,7 @@ class DataSource {
             Attribute("The Bestower","Al-Wahaab","الْوَهَّابُ"),
             Attribute("The Provider","Ar-Razzaaq","الرَّزَّاقُ"),
             Attribute("The Giver of Victory","Al-Fattah","الْفَتَّاحُ"),
-            Attribute("The Knower","Al-'Aleem'","اَلْعَلِيْمُ"),
+            Attribute("The Knower","Al-'Aleem","اَلْعَلِيْمُ"),
             Attribute("The Restrainer","Al-Qaabid","الْقَابِضُ"),
             Attribute("The Expander","Al-Baasit","الْبَاسِطُ"),
             Attribute("The Reducer","Al-Khaafidh","الْخَافِضُ"),
