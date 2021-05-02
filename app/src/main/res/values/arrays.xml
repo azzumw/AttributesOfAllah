@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="attributes">
+        <item>Ar-Rahman</item>
+        <item>Ar-Raheem</item>
+        <item>Ar-Malik</item>
+        <item>Ar-Qudoos</item>
+        <item>As-Salaam</item>
+        <item>Al-Mumin</item>
+        <item>Al-Muhaymin</item>
+        <item>Al-Azeez-</item>
+        <item>Al-Jabbaar</item>
+        <item>Al-Mutaqabir</item>
+        <item>Al-Khaliq</item>
+        <item>Al-Baari</item>
+        <item>Al-Musawir</item>
+        <item>Al-Gaffaar</item>
+        <item>Al-Qahaar</item>
+        <item>Al-Wahaab</item>
+        <item>Ar-Razaaq</item>
+        <item>Al-Fatha</item>
+        <item>Al-Aleem</item>
+        <item>Al-Qaabid</item>
+    </string-array>
+</resources>
