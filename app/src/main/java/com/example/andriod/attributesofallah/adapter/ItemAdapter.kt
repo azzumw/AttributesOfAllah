@@ -19,7 +19,7 @@ class ItemAdapter (private val  context : Context): RecyclerView.Adapter<ItemAda
 //     private val  context = context
 
 
-    val myData = DataSource().loadAttributes()
+    val myData = DataSource().loadAttributes(context)
     val numbers = (1..myData.size).toList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {

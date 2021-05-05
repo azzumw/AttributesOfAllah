@@ -5,5 +5,70 @@
     <string name="arabictexthint">عربى</string>
     <string name="englishtexthint">English</string>
 
+<!--    English attributes-->
+    <string name="eng_ar_rahman">The Compassionate</string>
+    <string name="eng_ar_raheem">The Merciful</string>
+    <string name="eng_al_malik">The King</string>
+    <string name="eng_al_quddus">The Holy</string>
+    <string name="eng_as_salaam">Source of Peace</string>
+    <string name="eng_al_mumin">The Gaurantor</string>
+    <string name="eng_al_muhaymin">The Guardian</string>
+    <string name="eng_al_azeez">The Mighty</string>
+    <string name="eng_al_jabaar">The Compeller</string>
+    <string name="eng_al_mutakabir">The Supreme</string>
+    <string name="eng_al_khaaliq">The Creator</string>
+    <string name="eng_al_baari">The Evolver</string>
+    <string name="eng_al_musawwir">The Fashioner</string>
+    <string name="eng_al_gaffaar">The Forgiver</string>
+    <string name="eng_al_qahaar">The Subduer</string>
+    <string name="eng_al_wahaab">The Bestower</string>
+    <string name="eng_ar_raaziq">The Provider</string>
+    <string name="eng_al_fattah">The Giver of Victory</string>
+    <string name="eng_al_aleem">The Knower</string>
+    <string name="eng_al_qaabid">The Restrainer</string>
+    <string name="eng_al_baasit">The Expander</string>
+    <string name="eng_al_khaafidh">The Reducer</string>
+    <string name="eng_ar_raafi">The Exalted</string>
+    <string name="eng_al_muizz">The Honourer</string>
+    <string name="eng_al_muzil">The Dishonourer</string>
+    <string name="eng_as_samee">The All-Hearing</string>
+    <string name="eng_al_baseer">The All-Seeing</string>
+    <string name="eng_al_hakam">The Judge</string>
+    <string name="eng_aladl">The Just</string>
+    <string name="eng_al_lateef">The Gentle</string>
 
+<!--    Transliteration-->
+    <string name="trans_ar_rahman">Ar-Rahman</string>
+    <string name="trans_ar_raheem">Ar-Raheem</string>
+    <string name="trans_al_malik">Al-Malik</string>
+    <string name="trans_al_quddus">Al-Quddus</string>
+    <string name="trans_as_salaam">As-Salaam</string>
+    <string name="al_mumin">Al-Mu\'min</string>
+    <string name="trans_muhaymin">Al-Muhaymin</string>
+    <string name="trans_al_azeez">Al-Azeez</string>
+    <string name="trans_al_jabaar">Al-Jabaar</string>
+    <string name="trans_al_mutakabir">Al-Mutaqabir</string>
+    <string name="trans_al_khaaliq">Al-Khaaliq</string>
+    <string name="trans_al_baari">Al-Baari</string>
+    <string name="trans_al_musawwir">Al-Musawwir</string>
+    <string name="trans_al_gaffaar">Al-Gaffaar</string>
+    <string name="trans_al_qahaar">Al-Qahaar</string>
+    <string name="trans_al_wahaab">Al-Wahaab</string>
+    <string name="trans_ar_raaziq">Ar-Razzaaq</string>
+    <string name="trans_al_fattah">Al-Fattah</string>
+    <string name="trans_al_aleem">Al-\'Aleem</string>
+    <string name="trans_al_qaabid">Al-Qaabid</string>
+    <string name="trans_al_baasit">Al-Baasit</string>
+    <string name="trans_al_khaafidh">Al-Khaafidh</string>
+    <string name="trans_ar_raafi">Ar-Raafi\'</string>
+    <string name="trans_al_muizz">Al-Mu\'izz</string>
+    <string name="trans_al_muzil">Al-Muzil</string>
+    <string name="trans_as_samee">As-Samee\'</string>
+    <string name="trans_al_baseer">Al-Baseer</string>
+    <string name="trans_al_hakam">Al-Hakam</string>
+    <string name="trans_al_adl">Al-\'Adl</string>
+    <string name="trans_al_lateef">Al-Lateef</string>
+
+<!--    Arabic Attributes-->
+    <string name="ar_rahman">الُرَّحْمَن</string>
 </resources>
