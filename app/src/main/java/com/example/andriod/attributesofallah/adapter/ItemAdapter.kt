@@ -53,7 +53,7 @@ class ItemAdapter (private val  context : Context): RecyclerView.Adapter<ItemAda
                 type = "text/plain"
             }
 
-            val shareIntent = Intent.createChooser(sendIntent, null)
+            val shareIntent = Intent.createChooser(sendIntent, "NO")
             startActivity(context,shareIntent,null)
 
             true

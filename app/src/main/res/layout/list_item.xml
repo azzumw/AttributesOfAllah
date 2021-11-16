@@ -3,12 +3,13 @@
 
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:id="@+id/card"
     android:layout_margin="8dp">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <RelativeLayout
         android:id="@+id/rootItemlayout"
         android:layout_width="match_parent"
         android:layout_height="96dp"
@@ -28,10 +29,11 @@
             android:id="@+id/translitration"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/numberTextView"
             android:layout_marginBottom="8dp"
-            android:textStyle="bold"
+            android:layout_toEndOf="@+id/numberTextView"
+            android:contentDescription="@string/transContentDesc"
             android:textSize="20sp"
+            android:textStyle="bold"
             tools:text="Transliteration" />
 
         <TextView
