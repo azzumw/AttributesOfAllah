@@ -75,8 +75,11 @@ class DataSource {
                 Attribute(context.getString(R.string.eng_al_qayyoom),context.getString(R.string.trans_al_qayyoom),context.getString(R.string.al_qayyoom)),
                 Attribute(context.getString(R.string.eng_al_waajid),context.getString(R.string.trans_al_waajid),context.getString(R.string.al_waajid)),
                 Attribute(context.getString(R.string.eng_al_maajid),context.getString(R.string.trans_al_maajid),context.getString(R.string.al_maajid)),
-                Attribute(context.getString(R.string.eng_al_waahid),context.getString(R.string.trans_al_waahid), context.getString(R.string.al_waahid))
-
+                Attribute(context.getString(R.string.eng_al_waahid),context.getString(R.string.trans_al_waahid), context.getString(R.string.al_waahid)),
+                Attribute(context.getString(R.string.eng_al_ahad),context.getString(R.string.trans_al_ahad), context.getString(R.string.al_ahad)),
+                Attribute(context.getString(R.string.eng_as_samad),context.getString(R.string.trans_as_samad), context.getString(R.string.as_samad)),
+                Attribute(context.getString(R.string.eng_al_qaadir),context.getString(R.string.trans_al_qaadir), context.getString(R.string.al_qaadir)),
+                Attribute(context.getString(R.string.eng_al_muqtadir),context.getString(R.string.trans_al_muqtadir), context.getString(R.string.al_muqtadir))
                 )
     }
 }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AttributesOfAllah</string>
+    <string name="app_name">Attributes Of Allah</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="arabictexthint">عربى</string>
@@ -73,6 +73,10 @@
     <string name="eng_al_waajid">The Perceiver</string>
     <string name="eng_al_maajid">The Illustrious</string>
     <string name="eng_al_waahid">The One</string>
+    <string name="eng_al_ahad">The One</string>
+    <string name="eng_as_samad">The Everlasting Refuge</string>
+    <string name="eng_al_qaadir">The Omnipotent</string>
+    <string name="eng_al_muqtadir">The Prevailing</string>
 
 <!--    Transliteration-->
     <string name="trans_ar_rahman">Ar-Rahman</string>
@@ -141,6 +145,10 @@
     <string name="trans_al_waajid">Al-Waajid</string>
     <string name="trans_al_maajid">Al-Maajid</string>
     <string name="trans_al_waahid">Al-Waahid</string>
+    <string name="trans_al_ahad">Al-Ahad</string>
+    <string name="trans_as_samad">As-Samad</string>
+    <string name="trans_al_qaadir">Al-Qaadir</string>
+    <string name="trans_al_muqtadir">Al-Muqtadir</string>
 
 <!--    Arabic Attributes-->
     <string name="ar_rahman">الُرَّحْمَن</string>
@@ -177,5 +185,9 @@
     <string name="al_waajid">الْوَاجِدُ</string>
     <string name="al_maajid">الْمَاجِدُ</string>
     <string name="al_waahid">الْواحِدُ</string>
+    <string name="al_ahad">اَلاَحَدُ</string>
+    <string name="as_samad">الصَّمَدُ</string>
+    <string name="al_qaadir">الْقَادِرُ</string>
+    <string name="al_muqtadir">الْمُقْتَدِرُ</string>
 
 </resources>

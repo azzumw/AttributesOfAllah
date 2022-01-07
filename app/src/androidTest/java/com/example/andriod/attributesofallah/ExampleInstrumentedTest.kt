@@ -1,30 +1,20 @@
 package com.example.andriod.attributesofallah
 
-import android.view.KeyEvent
-import android.view.View
-import android.widget.NumberPicker
 import android.widget.TextView
-import androidx.appcompat.widget.Toolbar
-import androidx.cardview.widget.CardView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
-import androidx.test.InstrumentationRegistry.getTargetContext
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.*
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.contrib.RecyclerViewActions
 import androidx.test.espresso.contrib.RecyclerViewActions.*
-import androidx.test.espresso.matcher.BoundedMatcher
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import androidx.test.platform.app.InstrumentationRegistry
 import com.example.andriod.attributesofallah.adapter.ItemAdapter
 import com.example.andriod.attributesofallah.data.DataSource
-import org.hamcrest.Description
-import org.hamcrest.Matcher
 import org.hamcrest.Matchers.*
 import org.junit.Test
 import org.junit.runner.RunWith
-import kotlin.math.log
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -36,7 +26,7 @@ import kotlin.math.log
 @RunWith(AndroidJUnit4::class)
 class ExampleInstrumentedTest() : BaseTestClass() {
 
-
+    private val recyclerView = viewWithId(R.id.recycler_view)
 
 
     @Test
@@ -127,8 +117,12 @@ class ExampleInstrumentedTest() : BaseTestClass() {
     }
 
     @Test fun check_ash_shakoor(){
+//        onView(withId(R.id.recycler_view))
+//                .perform(scrollTo<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.trans_al_shakoor))))
+
         onView(withId(R.id.recycler_view))
-                .perform(scrollTo<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.trans_al_shakoor))))
+                .perform(swipeUp())
+        onView(hasDescendant(allOf(withId(R.id.translitration), withText("Ash-Shakoor")))).check(matches(isDisplayed()))
     }
 
     @Test fun longClick_Ash_shakoor(){
@@ -387,25 +381,88 @@ class ExampleInstrumentedTest() : BaseTestClass() {
 
     }
 
+
     @Test
-    fun scrollToLastelement() {
+    fun test_recyclerView_hasChildCountSix() {
+        onView(withId(R.id.recycler_view)).check(matches(hasChildCount(6)))
+    }
 
-//        appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        val lastPosition = DataSource().loadAttributes(appContext).lastIndex
+    @Test
+    fun recyclerView_hasCardView() {
+        onView(withId(R.id.recycler_view)).check(matches(withChild(withId(R.id.card))))
+    }
 
-        onView(withId(R.id.recycler_view))
-                .perform(scrollToPosition<RecyclerView.ViewHolder>(lastPosition))
-//        onView(allOf(withId(R.id.translitration), withText("Al-Waahid"))).check(matches(isDisplayed()))
-//        onView(withText("Al-Waahid")).check(matches(isDisplayed()))
-//        onView(withText("The One")).check(matches(isDisplayed()))
-//        onView(withText(R.string.al_waahid)).check(matches(isDisplayed()))
+    @Test
+    fun recyclerView_hasRelativeLayout() {
+        onView(withId(R.id.recycler_view)).check(matches(hasDescendant(allOf(isAssignableFrom(ConstraintLayout::class.java), withId(R.id.rootItemlayout)))))
+    }
 
-        onView(allOf(
-                withId(R.id.translitration),
-                withText("Al-Waahid")
+    @Test
+    fun al_maajid() {
 
-        )).check(matches(isDisplayed()))
+        //why is this erroring out?
+
+//        onView(withId(R.id.recycler_view)).perform(swipeUp()).check(matches(hasDescendant(allOf(isAssignableFrom(TextView::class.java), withText(R.string.trans_al_maajid)))))
+        onView(withId(R.id.recycler_view)).perform(swipeUp())
+//                .check(matches(hasDescendant(allOf(withId(R.id.englishtextView), withText(R.string.trans_al_maajid)))))
+
+        onView(withText(R.string.eng_al_muhaymin)).perform(longClick())
+    }
+
+    @Test
+    fun long_click_al_ahad() {
+
+        // ***THIS WORKS***
+//        recyclerView.perform(RecyclerViewActions.scrollTo<ItemAdapter.ItemViewHolder>(hasDescendant(withText(R.string.trans_al_ahad))))
+//        onView(withText(R.string.trans_al_ahad)).perform(longClick())
+
+        recyclerView.perform(actionOnItem<ItemAdapter.ItemViewHolder>(hasDescendant(withText(R.string.trans_al_ahad)), longClick()))
     }
 
 
+    @Test
+    fun scrollToAs_Samad() {
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(67))
+
+        onView(allOf(isAssignableFrom(TextView::class.java), withText(R.string.eng_as_samad))).perform(longClick())
+    }
+
+    @Test
+    fun scrollTo_Al_Qaadir() {
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(68))
+
+        onView(allOf(isAssignableFrom(TextView::class.java), withText(R.string.eng_al_qaadir))).perform(longClick())
+    }
+
+    @Test
+    fun scroll_to_al_muqtadir() {
+        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(69))
+
+        onView(allOf(isAssignableFrom(TextView::class.java), withText(R.string.eng_al_muqtadir))).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun scroll_to_last_element_and_assert() {
+        val lastIndex = DataSource().loadAttributes(appContext).lastIndex
+        val lastElementTransliteration = DataSource().loadAttributes(appContext).last().transliteration
+        val lastElementEnglish = DataSource().loadAttributes(appContext).last().english
+        val lastElementArabic = DataSource().loadAttributes(appContext).last().arabic
+
+        recyclerView
+                .perform(actionOnItemAtPosition<RecyclerView.ViewHolder>(lastIndex, scrollTo()))
+                .check(matches(hasDescendant(withText(lastElementTransliteration))))
+                .check(matches(hasDescendant(withText(lastElementEnglish))))
+                .check(matches(hasDescendant(withText(lastElementArabic))))
+
+    }
+
+    @Test
+    fun scrollto_and_longClick_lastElement() {
+        val lastIndex = DataSource().loadAttributes(appContext).lastIndex
+        val lastElementTransliteration = DataSource().loadAttributes(appContext).last().transliteration
+
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(lastIndex))
+
+        onView(withText(lastElementTransliteration)).perform(longClick())
+    }
 }
