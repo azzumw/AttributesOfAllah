@@ -76,6 +76,15 @@
     <string name="eng_as_samad">The Everlasting Refuge</string>
     <string name="eng_al_qaadir">The Omnipotent</string>
     <string name="eng_al_muqtadir">The Prevailing</string>
+    <string name="eng_al_muqadam">The Expeditor</string>
+    <string name="eng_al_muakhar">The Delayer</string>
+    <string name="eng_al_awal">The First</string>
+    <string name="eng_al_aakhir">The Last</string>
+    <string name="eng_az_zawhir">The Manifest</string>
+    <string name="eng_al_baatin">The Hidden</string>
+    <string name="eng_al_waali">The Patron</string>
+    <string name="eng_al_mutaaali">The Self Exalted</string>
+
 
 <!--    Transliteration-->
     <string name="trans_ar_rahman">Ar-Rahman</string>
@@ -148,6 +157,14 @@
     <string name="trans_as_samad">As-Samad</string>
     <string name="trans_al_qaadir">Al-Qaadir</string>
     <string name="trans_al_muqtadir">Al-Muqtadir</string>
+    <string name="trans_al_muqadam">Al-Muqadam</string>
+    <string name="trans_al_muakhar">Al-Muakhar</string>
+    <string name="trans_al_awal">Al-Awal</string>
+    <string name="trans_al_aakhir">Al-Aakhir</string>
+    <string name="trans_az_zawhir">Az-Zawhir</string>
+    <string name="trans_al_baatin">Al-Baatin</string>
+    <string name="trans_al_waali">Al-Waali</string>
+    <string name="trans_al_mutaaali">Al-Muta\'aali</string>
 
 <!--    Arabic Attributes-->
     <string name="ar_rahman">الُرَّحْمَن</string>
@@ -188,5 +205,14 @@
     <string name="as_samad">الصَّمَدُ</string>
     <string name="al_qaadir">الْقَادِرُ</string>
     <string name="al_muqtadir">الْمُقْتَدِرُ</string>
+    <string name="al_muqadam">الْمُقَدِّمُ</string>
+    <string name="al_muakhar">الْمُؤَخِّرُ</string>
+    <string name="al_awal">الأوَّلُ</string>
+    <string name="al_aakhir">الآخِرُ</string>
+    <string name="az_zawhir">الظَّاهِرُ</string>
+    <string name="al_baatin">الْبَاطِنُ</string>
+    <string name="al_waali">الْوَالِي</string>
+    <string name="al_mutaaali">الْمُتَعَالِي</string>
+
 
 </resources>

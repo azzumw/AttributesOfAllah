@@ -79,7 +79,16 @@ class DataSource {
                 Attribute(context.getString(R.string.eng_al_ahad),context.getString(R.string.trans_al_ahad), context.getString(R.string.al_ahad)),
                 Attribute(context.getString(R.string.eng_as_samad),context.getString(R.string.trans_as_samad), context.getString(R.string.as_samad)),
                 Attribute(context.getString(R.string.eng_al_qaadir),context.getString(R.string.trans_al_qaadir), context.getString(R.string.al_qaadir)),
-                Attribute(context.getString(R.string.eng_al_muqtadir),context.getString(R.string.trans_al_muqtadir), context.getString(R.string.al_muqtadir))
+                Attribute(context.getString(R.string.eng_al_muqtadir),context.getString(R.string.trans_al_muqtadir), context.getString(R.string.al_muqtadir)),
+                Attribute(context.getString(R.string.eng_al_muqadam),context.getString(R.string.trans_al_muqadam), context.getString(R.string.al_muqadam)),
+                Attribute(context.getString(R.string.eng_al_muakhar),context.getString(R.string.trans_al_muakhar), context.getString(R.string.al_muakhar)),
+                Attribute(context.getString(R.string.eng_al_awal),context.getString(R.string.trans_al_awal), context.getString(R.string.al_awal)),
+                Attribute(context.getString(R.string.eng_al_aakhir),context.getString(R.string.trans_al_aakhir), context.getString(R.string.al_aakhir)),
+                Attribute(context.getString(R.string.eng_az_zawhir),context.getString(R.string.trans_az_zawhir), context.getString(R.string.az_zawhir)),
+                Attribute(context.getString(R.string.eng_al_baatin),context.getString(R.string.trans_al_baatin), context.getString(R.string.al_baatin)),
+                Attribute(context.getString(R.string.eng_al_waali),context.getString(R.string.trans_al_waali), context.getString(R.string.al_waali)),
+                Attribute(context.getString(R.string.eng_al_mutaaali),context.getString(R.string.trans_al_mutaaali), context.getString(R.string.al_mutaaali))
+
                 )
     }
 }

@@ -15,6 +15,7 @@ import com.example.andriod.attributesofallah.data.DataSource
 import org.hamcrest.Matchers.*
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.w3c.dom.Text
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -24,7 +25,7 @@ import org.junit.runner.RunWith
 
 //We annotate each test class with AndroidJunit4::class otherwise the default Junit runner will take over the running process, and tests will fail.
 @RunWith(AndroidJUnit4::class)
-class ExampleInstrumentedTest() : BaseTestClass() {
+class ListsTests() : BaseTestClass() {
 
     private val recyclerView = viewWithId(R.id.recycler_view)
 
@@ -439,6 +440,62 @@ class ExampleInstrumentedTest() : BaseTestClass() {
         recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(69))
 
         onView(allOf(isAssignableFrom(TextView::class.java), withText(R.string.eng_al_muqtadir))).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun scrollTo_al_muqadam() {
+        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(70))
+
+        onView(allOf(isAssignableFrom(TextView::class.java), withText("The Expediter"))).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun scrollTo_al_muakhar() {
+        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(71))
+
+        onView(allOf(isAssignableFrom(TextView::class.java), withText("The Delayer"))).check(matches(isDisplayed())).perform(longClick())
+    }
+
+    @Test
+    fun scrollto_al_awal() {
+        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(72))
+
+        onView(allOf(isAssignableFrom(TextView::class.java), withText(R.string.eng_al_awal))).check(matches(isDisplayed())).perform(longClick())
+    }
+
+    @Test
+    fun scrollTo_al_aakhir() {
+        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(73))
+
+        onView(allOf(isAssignableFrom(TextView::class.java), withText(R.string.eng_al_aakhir))).check(matches(isDisplayed())).perform(longClick())
+    }
+
+    @Test
+    fun scroll_to_az_zawhir() {
+        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(74))
+
+        onView(allOf(isAssignableFrom(TextView::class.java), withText(R.string.eng_az_zawhir))).check(matches(isDisplayed())).perform(longClick())
+    }
+
+    @Test
+    fun scroll_to_al_baatin() {
+        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(75))
+
+        onView(withText(R.string.eng_al_baatin)).check(matches(isDisplayed())).perform(longClick())
+    }
+
+    @Test
+    fun scroll_to_al_waali() {
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(76))
+
+        onView(allOf(isAssignableFrom(TextView::class.java), withText("Al-Waali"))).check(matches(isDisplayed())).perform(longClick())
+    }
+
+    @Test
+    fun scroll_to_al_mutaaali() {
+        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(77))
+
+        onView(withText("Al-Muta'aali")).check(matches(hasSibling(withText("The Self Exalted")))).perform(longClick())
     }
 
     @Test
