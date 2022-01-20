@@ -84,6 +84,8 @@
     <string name="eng_al_baatin">The Hidden</string>
     <string name="eng_al_waali">The Patron</string>
     <string name="eng_al_mutaaali">The Self Exalted</string>
+    <string name="eng_al_barr">The Beneficent</string>
+    <string name="eng_at_tawwaab">The Ever-Pardoning</string>
 
 
 <!--    Transliteration-->
@@ -165,6 +167,8 @@
     <string name="trans_al_baatin">Al-Baatin</string>
     <string name="trans_al_waali">Al-Waali</string>
     <string name="trans_al_mutaaali">Al-Muta\'aali</string>
+    <string name="trans_al_barr">Al-Barr</string>
+    <string name="trans_at_tawwaab">At-Tawwaab</string>
 
 <!--    Arabic Attributes-->
     <string name="ar_rahman">الُرَّحْمَن</string>
@@ -213,6 +217,8 @@
     <string name="al_baatin">الْبَاطِنُ</string>
     <string name="al_waali">الْوَالِي</string>
     <string name="al_mutaaali">الْمُتَعَالِي</string>
+    <string name="al_barr">الْبَرُّ</string>
+    <string name="at_tawwaab">التَّوَابُ</string>
 
 
 </resources>

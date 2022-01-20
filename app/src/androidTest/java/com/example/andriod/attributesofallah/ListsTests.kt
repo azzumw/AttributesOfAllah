@@ -498,6 +498,20 @@ class ListsTests() : BaseTestClass() {
         onView(withText("Al-Muta'aali")).check(matches(hasSibling(withText("The Self Exalted")))).perform(longClick())
     }
 
+
+    @Test
+    fun scroll_to_al_barr() {
+        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(78))
+
+        onView(withText("Al-Barr")).check(matches(isDisplayed())).perform(longClick())
+    }
+
+    @Test
+    fun scroll_to_at_tawwaab() {
+        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(79))
+        onView(allOf(isAssignableFrom(TextView::class.java), withText("At-Tawwaab"))).check(matches(isDisplayed())).perform(longClick())
+    }
+
     @Test
     fun scroll_to_last_element_and_assert() {
         val lastIndex = DataSource().loadAttributes(appContext).lastIndex

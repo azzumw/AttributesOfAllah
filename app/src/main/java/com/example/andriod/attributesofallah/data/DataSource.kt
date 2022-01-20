@@ -87,7 +87,9 @@ class DataSource {
                 Attribute(context.getString(R.string.eng_az_zawhir),context.getString(R.string.trans_az_zawhir), context.getString(R.string.az_zawhir)),
                 Attribute(context.getString(R.string.eng_al_baatin),context.getString(R.string.trans_al_baatin), context.getString(R.string.al_baatin)),
                 Attribute(context.getString(R.string.eng_al_waali),context.getString(R.string.trans_al_waali), context.getString(R.string.al_waali)),
-                Attribute(context.getString(R.string.eng_al_mutaaali),context.getString(R.string.trans_al_mutaaali), context.getString(R.string.al_mutaaali))
+                Attribute(context.getString(R.string.eng_al_mutaaali),context.getString(R.string.trans_al_mutaaali), context.getString(R.string.al_mutaaali)),
+                Attribute(context.getString(R.string.eng_al_barr),context.getString(R.string.trans_al_barr), context.getString(R.string.al_barr)),
+                Attribute(context.getString(R.string.eng_at_tawwaab),context.getString(R.string.trans_at_tawwaab), context.getString(R.string.at_tawwaab))
 
                 )
     }
