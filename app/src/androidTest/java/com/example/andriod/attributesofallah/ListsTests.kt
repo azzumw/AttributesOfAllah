@@ -108,7 +108,7 @@ class ListsTests() : BaseTestClass() {
     @Test
     fun scrollto_alAzeem() {
         onView(withId(R.id.recycler_view))
-                .perform(RecyclerViewActions.actionOnItem<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.trans_al_azeez)), longClick()))
+                .perform(actionOnItem<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.trans_al_azeez)), longClick()))
     }
 
     @Test
@@ -128,7 +128,7 @@ class ListsTests() : BaseTestClass() {
 
     @Test fun longClick_Ash_shakoor(){
         onView(withId(R.id.recycler_view))
-                .perform(RecyclerViewActions.actionOnItem<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.trans_al_shakoor)), longClick()))
+                .perform(actionOnItem<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.trans_al_shakoor)), longClick()))
     }
 
     @Test fun check_al_alee(){
@@ -138,17 +138,17 @@ class ListsTests() : BaseTestClass() {
 
     @Test fun scroll_Al_alee(){
         onView(withId(R.id.recycler_view)).
-        perform(RecyclerViewActions.actionOnItem<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.eng_al_alee)), longClick()))
+        perform(actionOnItem<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.eng_al_alee)), longClick()))
     }
 
     @Test fun longClick_al_kabeer(){
         onView(withId(R.id.recycler_view))
-                .perform(RecyclerViewActions.actionOnItem<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.eng_al_kabeer)), longClick()))
+                .perform(actionOnItem<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.eng_al_kabeer)), longClick()))
     }
 
     @Test fun longClick_al_hafeedh(){
         onView(withId(R.id.recycler_view))
-                .perform(RecyclerViewActions.actionOnItem<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.trans_al_hafeedh)), longClick()))
+                .perform(actionOnItem<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.trans_al_hafeedh)), longClick()))
     }
 
     @Test fun scrollToAlKabeer(){
@@ -163,54 +163,54 @@ class ListsTests() : BaseTestClass() {
 
     @Test fun longClick_AlMuqeet(){
         onView(withId(R.id.recycler_view))
-                .perform(RecyclerViewActions.actionOnItem<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.trans_al_muqeet)), longClick()))
+                .perform(actionOnItem<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.trans_al_muqeet)), longClick()))
     }
 
     @Test
     fun longClick_AlHaseeb() {
         onView(withId(R.id.recycler_view))
-                .perform(RecyclerViewActions.actionOnItem<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.trans_al_haseeb)), longClick()))
+                .perform(actionOnItem<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.trans_al_haseeb)), longClick()))
     }
 
     @Test fun scrollTo_AlMuqeet(){
         onView(withId(R.id.recycler_view))
-                .perform(RecyclerViewActions.scrollTo<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.eng_al_muqeet))))
+                .perform(scrollTo<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.eng_al_muqeet))))
     }
 
     @Test
     fun scrollTo_AlHaseeb() {
         onView(withId(R.id.recycler_view))
-                .perform(RecyclerViewActions.scrollTo<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.eng_al_haseeb))))
+                .perform(scrollTo<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.eng_al_haseeb))))
     }
 
     @Test
     fun longClick_AlJaleel(){
         onView(withId(R.id.recycler_view))
-                .perform(RecyclerViewActions.actionOnItem<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.trans_al_jaleel)), longClick()))
+                .perform(actionOnItem<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.trans_al_jaleel)), longClick()))
     }
 
     @Test
     fun longClick_alKareem() {
         onView(withId(R.id.recycler_view))
-                .perform(RecyclerViewActions.actionOnItem<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.trans_al_kareem)), longClick()))
+                .perform(actionOnItem<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.trans_al_kareem)), longClick()))
     }
 
     @Test
     fun scrollTo_alJaleel() {
         onView(withId(R.id.recycler_view))
-                .perform(RecyclerViewActions.scrollTo<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.eng_al_jaleel))))
+                .perform(scrollTo<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.eng_al_jaleel))))
     }
 
     @Test
     fun scrollTo_AlKareem() {
         onView(withId(R.id.recycler_view))
-                .perform(RecyclerViewActions.scrollTo<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.eng_al_kareem))))
+                .perform(scrollTo<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.eng_al_kareem))))
     }
 
     @Test
     fun scrollToPosition() {
         onView(withId(R.id.recycler_view))
-                .perform(RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(20, scrollTo()))
+                .perform(actionOnItemAtPosition<RecyclerView.ViewHolder>(20, scrollTo()))
 
 
 //        onView(withId(R.id.recycler_view))
@@ -244,7 +244,7 @@ class ListsTests() : BaseTestClass() {
     @Test
     fun scrollTo_AlWaasi() {
         onView(withId(R.id.recycler_view))
-                .perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(44))
+                .perform(scrollToPosition<RecyclerView.ViewHolder>(44))
     }
 
     @Test
@@ -263,7 +263,7 @@ class ListsTests() : BaseTestClass() {
     @Test
     fun scrollTo_AlHakeem() {
         onView(withId(R.id.recycler_view))
-                .perform(RecyclerViewActions.scrollTo<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.eng_al_hakeem))))
+                .perform(scrollTo<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.eng_al_hakeem))))
     }
 
     @Test
@@ -300,7 +300,7 @@ class ListsTests() : BaseTestClass() {
     @Test
     fun scrollTo_Al_Baaith() {
         onView(withId(R.id.recycler_view))
-                .perform(RecyclerViewActions.scrollTo<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.trans_al_baaith))))
+                .perform(scrollTo<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.trans_al_baaith))))
                 .perform(actionOnItem<RecyclerView.ViewHolder>(hasDescendant(withText(R.string.trans_al_baaith)), longClick()))
 
 
@@ -437,49 +437,49 @@ class ListsTests() : BaseTestClass() {
 
     @Test
     fun scroll_to_al_muqtadir() {
-        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(69))
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(69))
 
         onView(allOf(isAssignableFrom(TextView::class.java), withText(R.string.eng_al_muqtadir))).check(matches(isDisplayed()))
     }
 
     @Test
     fun scrollTo_al_muqadam() {
-        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(70))
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(70))
 
         onView(allOf(isAssignableFrom(TextView::class.java), withText("The Expediter"))).check(matches(isDisplayed()))
     }
 
     @Test
     fun scrollTo_al_muakhar() {
-        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(71))
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(71))
 
         onView(allOf(isAssignableFrom(TextView::class.java), withText("The Delayer"))).check(matches(isDisplayed())).perform(longClick())
     }
 
     @Test
     fun scrollto_al_awal() {
-        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(72))
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(72))
 
         onView(allOf(isAssignableFrom(TextView::class.java), withText(R.string.eng_al_awal))).check(matches(isDisplayed())).perform(longClick())
     }
 
     @Test
     fun scrollTo_al_aakhir() {
-        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(73))
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(73))
 
         onView(allOf(isAssignableFrom(TextView::class.java), withText(R.string.eng_al_aakhir))).check(matches(isDisplayed())).perform(longClick())
     }
 
     @Test
     fun scroll_to_az_zawhir() {
-        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(74))
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(74))
 
         onView(allOf(isAssignableFrom(TextView::class.java), withText(R.string.eng_az_zawhir))).check(matches(isDisplayed())).perform(longClick())
     }
 
     @Test
     fun scroll_to_al_baatin() {
-        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(75))
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(75))
 
         onView(withText(R.string.eng_al_baatin)).check(matches(isDisplayed())).perform(longClick())
     }
@@ -493,7 +493,7 @@ class ListsTests() : BaseTestClass() {
 
     @Test
     fun scroll_to_al_mutaaali() {
-        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(77))
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(77))
 
         onView(withText("Al-Muta'aali")).check(matches(hasSibling(withText("The Self Exalted")))).perform(longClick())
     }
@@ -501,15 +501,30 @@ class ListsTests() : BaseTestClass() {
 
     @Test
     fun scroll_to_al_barr() {
-        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(78))
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(78))
 
         onView(withText("Al-Barr")).check(matches(isDisplayed())).perform(longClick())
     }
 
     @Test
     fun scroll_to_at_tawwaab() {
-        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(79))
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(79))
         onView(allOf(isAssignableFrom(TextView::class.java), withText("At-Tawwaab"))).check(matches(isDisplayed())).perform(longClick())
+    }
+
+    @Test
+    fun scroll_to_al_muntaqim() {
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(80))
+
+        onView(withText("Al-Muntaqim")).check(matches(hasSibling(withText("The Avenger")))).perform(longClick())
+
+    }
+
+    @Test
+    fun scroll_to_al_afuww() {
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(81))
+
+        onView(withText("Al-'Afuww")).check(matches(allOf(hasSibling(withText(R.string.al_afuww)), hasSibling(withText("The Pardoner"))))).perform(longClick())
     }
 
     @Test

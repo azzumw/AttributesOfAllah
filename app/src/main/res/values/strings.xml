@@ -86,6 +86,8 @@
     <string name="eng_al_mutaaali">The Self Exalted</string>
     <string name="eng_al_barr">The Beneficent</string>
     <string name="eng_at_tawwaab">The Ever-Pardoning</string>
+    <string name="eng_al_muntaqim">The Avenger</string>
+    <string name="eng_al_afuww">The Pardoner</string>
 
 
 <!--    Transliteration-->
@@ -169,6 +171,8 @@
     <string name="trans_al_mutaaali">Al-Muta\'aali</string>
     <string name="trans_al_barr">Al-Barr</string>
     <string name="trans_at_tawwaab">At-Tawwaab</string>
+    <string name="trans_al_muntaqim">Al-Muntaqim</string>
+    <string name="trans_al_afuww">Al-\'Afuww</string>
 
 <!--    Arabic Attributes-->
     <string name="ar_rahman">الُرَّحْمَن</string>
@@ -219,6 +223,8 @@
     <string name="al_mutaaali">الْمُتَعَالِي</string>
     <string name="al_barr">الْبَرُّ</string>
     <string name="at_tawwaab">التَّوَابُ</string>
+    <string name="al_muntaqim">التَّوَابُ</string>
+    <string name="al_afuww">العَفُوُ</string>
 
 
 </resources>
