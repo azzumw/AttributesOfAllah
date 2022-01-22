@@ -528,6 +528,31 @@ class ListsTests() : BaseTestClass() {
     }
 
     @Test
+    fun scroll_to_ar_raoof() {
+        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(82))
+
+        onView(withText("Ar-Ra'oof")).check(matches(allOf(hasSibling(withText(R.string.ar_raoof)), hasSibling(withText("The Most Kind"))))).perform(longClick())
+    }
+
+    @Test
+    fun scroll_to_maalik_ul_mulk() {
+        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(83))
+
+        onView(withText(equalToIgnoringCase("Malik-ul-mulk"))).check(matches(allOf(hasSibling(withText("The Master of Dominion")), hasSibling(withText(R.string.malik_ul_mulk)))))
+                .perform(longClick())
+    }
+
+    @Test
+    fun scroll_to_dhul_jallali_wal_ikraam() {
+        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(84))
+
+        onView(withText(equalToIgnoringCase("Dhul Jalaali Wal Ikraam")))
+                .check(matches(allOf(hasSibling(withText(R.string.eng_dhul_jalaali_wal_ikraam)), hasSibling(withText(R.string.dhul_jalaali_wal_ikraam)))))
+                .perform(longClick())
+
+    }
+
+    @Test
     fun scroll_to_last_element_and_assert() {
         val lastIndex = DataSource().loadAttributes(appContext).lastIndex
         val lastElementTransliteration = DataSource().loadAttributes(appContext).last().transliteration

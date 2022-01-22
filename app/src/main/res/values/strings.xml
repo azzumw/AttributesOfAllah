@@ -5,7 +5,7 @@
     <string name="englishtexthint">English</string>
     <string name="transContentDesc">textForRomanArabic</string>
 
-<!--    English attributes-->
+    <!--    English attributes-->
     <string name="eng_ar_rahman">The Compassionate</string>
     <string name="eng_ar_raheem">The Merciful</string>
     <string name="eng_al_malik">The King</string>
@@ -88,9 +88,12 @@
     <string name="eng_at_tawwaab">The Ever-Pardoning</string>
     <string name="eng_al_muntaqim">The Avenger</string>
     <string name="eng_al_afuww">The Pardoner</string>
+    <string name="eng_ar_raoof">The Most Kind</string>
+    <string name="eng_malik_ul_mulk">The Master of Dominion</string>
+    <string name="eng_dhul_jalaali_wal_ikraam">Lord of Majesty and Generosity</string>
 
 
-<!--    Transliteration-->
+    <!--    Transliteration-->
     <string name="trans_ar_rahman">Ar-Rahman</string>
     <string name="trans_ar_raheem">Ar-Raheem</string>
     <string name="trans_al_malik">Al-Malik</string>
@@ -173,8 +176,11 @@
     <string name="trans_at_tawwaab">At-Tawwaab</string>
     <string name="trans_al_muntaqim">Al-Muntaqim</string>
     <string name="trans_al_afuww">Al-\'Afuww</string>
+    <string name="trans_ar_raoof">Ar-Ra\'oof</string>
+    <string name="trans_malik_ul_mulk">Malik-ul-Mulk</string>
+    <string name="trans_dhul_jalaali_wal_ikraam">Dhul Jalaali Wal Ikraam</string>
 
-<!--    Arabic Attributes-->
+    <!--    Arabic Attributes-->
     <string name="ar_rahman">الُرَّحْمَن</string>
     <string name="ar_raheem">الرَّحِيمُ</string>
     <string name="ash_shakoor">الشَّكُورُ</string>
@@ -225,6 +231,10 @@
     <string name="at_tawwaab">التَّوَابُ</string>
     <string name="al_muntaqim">التَّوَابُ</string>
     <string name="al_afuww">العَفُوُ</string>
+    <string name="ar_raoof">الرَّؤُوفُ</string>
+    <string name="malik_ul_mulk">َمَالِكُ ٱلْمُلْكُ</string>
+    <string name="dhul_jalaali_wal_ikraam">ذُوالْجَلاَلِ وَالإكْرَامِ</string>
+
 
 
 </resources>
