@@ -416,7 +416,6 @@ class ListsTests() : BaseTestClass() {
         // ***THIS WORKS***
 //        recyclerView.perform(RecyclerViewActions.scrollTo<ItemAdapter.ItemViewHolder>(hasDescendant(withText(R.string.trans_al_ahad))))
 //        onView(withText(R.string.trans_al_ahad)).perform(longClick())
-
         recyclerView.perform(actionOnItem<ItemAdapter.ItemViewHolder>(hasDescendant(withText(R.string.trans_al_ahad)), longClick()))
     }
 
@@ -516,7 +515,7 @@ class ListsTests() : BaseTestClass() {
     fun scroll_to_al_muntaqim() {
         recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(80))
 
-        onView(withText("Al-Muntaqim")).check(matches(hasSibling(withText("The Avenger")))).perform(longClick())
+        onView(withText("Al-Muntaqim")).check(matches(hasSibling(withText("الْمُنْتَقِمُ")))).perform(longClick())
 
     }
 
@@ -550,6 +549,33 @@ class ListsTests() : BaseTestClass() {
                 .check(matches(allOf(hasSibling(withText(R.string.eng_dhul_jalaali_wal_ikraam)), hasSibling(withText(R.string.dhul_jalaali_wal_ikraam)))))
                 .perform(longClick())
 
+    }
+
+    @Test
+    fun scroll_to_al_muqsit() {
+        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(85))
+
+        onView(withText(equalToIgnoringCase("Al-muqsit")))
+                .check(matches
+                (allOf
+                    (
+                        hasSibling(withText("The Just One")),
+                        hasSibling(withText("الْمُقْسِطُ"))
+                    )
+                ))
+                .perform(longClick())
+    }
+
+    @Test
+    fun scroll_to_al_jaami() {
+        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(86))
+
+        onView(withText("Al-Jaami'"))
+                .check(matches(allOf(
+                        hasSibling(withText("The Gatherer")),
+                        hasSibling(withText("الْجَامِعُ"))
+                )))
+                .perform(longClick())
     }
 
     @Test

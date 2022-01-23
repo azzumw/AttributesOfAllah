@@ -91,6 +91,8 @@
     <string name="eng_ar_raoof">The Most Kind</string>
     <string name="eng_malik_ul_mulk">The Master of Dominion</string>
     <string name="eng_dhul_jalaali_wal_ikraam">Lord of Majesty and Generosity</string>
+    <string name="eng_al_muqsit">The Just One</string>
+    <string name="eng_al_jaami">The Gatherer</string>
 
 
     <!--    Transliteration-->
@@ -179,6 +181,8 @@
     <string name="trans_ar_raoof">Ar-Ra\'oof</string>
     <string name="trans_malik_ul_mulk">Malik-ul-Mulk</string>
     <string name="trans_dhul_jalaali_wal_ikraam">Dhul Jalaali Wal Ikraam</string>
+    <string name="trans_al_muqsit">Al-Muqsit</string>
+    <string name="trans_al_jaami">Al-Jaami\'</string>
 
     <!--    Arabic Attributes-->
     <string name="ar_rahman">الُرَّحْمَن</string>
@@ -229,11 +233,13 @@
     <string name="al_mutaaali">الْمُتَعَالِي</string>
     <string name="al_barr">الْبَرُّ</string>
     <string name="at_tawwaab">التَّوَابُ</string>
-    <string name="al_muntaqim">التَّوَابُ</string>
+    <string name="al_muntaqim">الْمُنْتَقِمُ</string>
     <string name="al_afuww">العَفُوُ</string>
     <string name="ar_raoof">الرَّؤُوفُ</string>
     <string name="malik_ul_mulk">َمَالِكُ ٱلْمُلْكُ</string>
     <string name="dhul_jalaali_wal_ikraam">ذُوالْجَلاَلِ وَالإكْرَامِ</string>
+    <string name="al_muqsit">الْمُقْسِطُ</string>
+    <string name="al_jaami">الْجَامِعُ</string>
 
 
 
