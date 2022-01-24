@@ -1,8 +1,12 @@
 package com.example.andriod.attributesofallah
 
+import android.util.Log
+import android.view.KeyEvent
+import android.widget.Button
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
+import androidx.test.espresso.Espresso
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.*
 import androidx.test.espresso.assertion.ViewAssertions.matches
@@ -10,6 +14,11 @@ import androidx.test.espresso.contrib.RecyclerViewActions
 import androidx.test.espresso.contrib.RecyclerViewActions.*
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.platform.app.InstrumentationRegistry.getInstrumentation
+import androidx.test.uiautomator.By
+import androidx.test.uiautomator.BySelector
+import androidx.test.uiautomator.UiDevice
+import androidx.test.uiautomator.UiSelector
 import com.example.andriod.attributesofallah.adapter.ItemAdapter
 import com.example.andriod.attributesofallah.data.DataSource
 import org.hamcrest.Matchers.*
@@ -576,6 +585,71 @@ class ListsTests() : BaseTestClass() {
                         hasSibling(withText("الْجَامِعُ"))
                 )))
                 .perform(longClick())
+    }
+
+    @Test
+    fun scroll_to_al_ghani() {
+        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(87))
+
+        onView(withText("Al-Ghaniyy"))
+                .check(matches(
+                        allOf(
+                                hasSibling(withText("The Self Sufficient")),
+                                hasSibling(withText("ٱلْغَنيُّ"))
+                        )
+                )).perform(longClick())
+    }
+
+    @Test
+    fun scroll_to_al_mughni() {
+        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(88))
+
+        onView(withText(R.string.trans_al_mugni))
+                .check(matches(
+                        allOf(
+                                hasSibling(withText(R.string.eng_al_mugni)),
+                                hasSibling(withText(R.string.al_mugni))
+                        )
+                ))
+    }
+
+    @Test
+    fun scroll_to_al_maani_and_shares_it_with_Emre() {
+
+        val device = UiDevice.getInstance(getInstrumentation())
+
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(89))
+
+        onView(withText(R.string.trans_al_maani))
+                .check(matches(
+                        allOf(
+                                hasSibling(withText(R.string.eng_al_maani)),
+                                hasSibling(withText(R.string.al_maani)),
+
+                        )
+                ))
+                .perform(longClick())
+
+        device.findObject(By.text("Emre")).click()
+        device.pressKeyCode(KeyEvent.KEYCODE_ENTER)
+
+        // class = android.widget.ImageButton
+        //res id : com.whatsapp:id/send
+
+        device.findObject(By.desc("Send")).click()
+
+    }
+
+    @Test
+    fun test_ui_automator() {
+        val device = UiDevice.getInstance(getInstrumentation())
+
+        device.pressHome()
+        device.sleep()
+        device.wakeUp()
+        device.openNotification()
+
+
     }
 
     @Test

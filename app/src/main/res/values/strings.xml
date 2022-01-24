@@ -93,6 +93,9 @@
     <string name="eng_dhul_jalaali_wal_ikraam">Lord of Majesty and Generosity</string>
     <string name="eng_al_muqsit">The Just One</string>
     <string name="eng_al_jaami">The Gatherer</string>
+    <string name="eng_al_ganiyy">The Self Sufficient</string>
+    <string name="eng_al_mugni">The Enricher</string>
+    <string name="eng_al_maani">The Withholder</string>
 
 
     <!--    Transliteration-->
@@ -183,6 +186,9 @@
     <string name="trans_dhul_jalaali_wal_ikraam">Dhul Jalaali Wal Ikraam</string>
     <string name="trans_al_muqsit">Al-Muqsit</string>
     <string name="trans_al_jaami">Al-Jaami\'</string>
+    <string name="trans_al_ganiyy">Al-Ghaniyy</string>
+    <string name="trans_al_mugni">Al-Mughniy</string>
+    <string name="trans_al_maani">Al-Maani\'</string>
 
     <!--    Arabic Attributes-->
     <string name="ar_rahman">الُرَّحْمَن</string>
@@ -240,7 +246,8 @@
     <string name="dhul_jalaali_wal_ikraam">ذُوالْجَلاَلِ وَالإكْرَامِ</string>
     <string name="al_muqsit">الْمُقْسِطُ</string>
     <string name="al_jaami">الْجَامِعُ</string>
-
-
+    <string name="al_ganiyy">ٱلْغَنيُّ</string>
+    <string name="al_mugni">ٱلْمُغْنِيُّ</string>
+    <string name="al_maani">اَلْمَانِعُ</string>
 
 </resources>
