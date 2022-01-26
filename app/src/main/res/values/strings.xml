@@ -96,6 +96,11 @@
     <string name="eng_al_ganiyy">The Self Sufficient</string>
     <string name="eng_al_mugni">The Enricher</string>
     <string name="eng_al_maani">The Withholder</string>
+    <string name="eng_ad_dhaar">The Afflictor</string>
+    <string name="eng_an_naafi">The Benefactor</string>
+    <string name="eng_an_noor">The Light</string>
+    <string name="eng_al_haadi">The Guide</string>
+    <string name="eng_al_badee">The Originator</string>
 
 
     <!--    Transliteration-->
@@ -189,6 +194,11 @@
     <string name="trans_al_ganiyy">Al-Ghaniyy</string>
     <string name="trans_al_mugni">Al-Mughniy</string>
     <string name="trans_al_maani">Al-Maani\'</string>
+    <string name="trans_ad_dhaar">Ad-Dhaar</string>
+    <string name="trans_an_naafi">An-Naafi\'</string>
+    <string name="trans_an_noor">An-Noor</string>
+    <string name="trans_al_haadi">Al-Haadi</string>
+    <string name="trans_al_badee">Al-Badee\'</string>
 
     <!--    Arabic Attributes-->
     <string name="ar_rahman">الُرَّحْمَن</string>
@@ -249,5 +259,10 @@
     <string name="al_ganiyy">ٱلْغَنيُّ</string>
     <string name="al_mugni">ٱلْمُغْنِيُّ</string>
     <string name="al_maani">اَلْمَانِعُ</string>
+    <string name="ad_dhaar">الضَّارَ</string>
+    <string name="an_naafi">النَّافِعُ</string>
+    <string name="an_noor">النُّورُ</string>
+    <string name="al_haadi">الْهَادِي</string>
+    <string name="al_badee">الْبَدِيعُ</string>
 
 </resources>

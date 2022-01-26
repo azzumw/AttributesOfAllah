@@ -14,6 +14,7 @@ import androidx.test.espresso.contrib.RecyclerViewActions
 import androidx.test.espresso.contrib.RecyclerViewActions.*
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.platform.app.InstrumentationRegistry.getInstrumentation
 import androidx.test.uiautomator.By
 import androidx.test.uiautomator.BySelector
@@ -22,6 +23,8 @@ import androidx.test.uiautomator.UiSelector
 import com.example.andriod.attributesofallah.adapter.ItemAdapter
 import com.example.andriod.attributesofallah.data.DataSource
 import org.hamcrest.Matchers.*
+import org.junit.After
+import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.w3c.dom.Text
@@ -37,7 +40,14 @@ import org.w3c.dom.Text
 class ListsTests() : BaseTestClass() {
 
     private val recyclerView = viewWithId(R.id.recycler_view)
+    private lateinit var device : UiDevice
 
+
+
+    @Before
+    fun setUp() {
+        device = UiDevice.getInstance(getInstrumentation())
+    }
 
     @Test
     fun checkFirstAttribute() {
@@ -630,19 +640,96 @@ class ListsTests() : BaseTestClass() {
                 ))
                 .perform(longClick())
 
-        device.findObject(By.text("Emre")).click()
-        device.pressKeyCode(KeyEvent.KEYCODE_ENTER)
-
-        // class = android.widget.ImageButton
-        //res id : com.whatsapp:id/send
-
-        device.findObject(By.desc("Send")).click()
+        Helpers.shareTheNametWith("Emre",device)
 
     }
 
     @Test
+    fun scroll_to_ad_dhaar() {
+
+        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(90))
+
+        onView(withText(R.string.trans_ad_dhaar))
+                .check(matches(
+                        allOf(
+                                hasSibling(withText(R.string.eng_ad_dhaar)),
+                                hasSibling(withText(R.string.ad_dhaar))
+                        )
+                ))
+                .perform(longClick())
+
+        Helpers.shareTheNametWith("Mama",device = device)
+    }
+
+    @Test
+    fun scroll_to_an_naafi() {
+        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(91))
+
+        onView(withText(R.string.trans_an_naafi))
+                .check(matches(
+                        allOf(
+                                hasSibling(withText(R.string.eng_an_naafi)),
+                                hasSibling(withText(R.string.an_naafi))
+                        )
+                )).perform(longClick())
+
+        Helpers.shareTheNametWith("Mama",device = device)
+    }
+
+    @Test
+    fun scroll_to_an_noor() {
+        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(92))
+
+        onView(withText("An-Noor"))
+                .check(matches(
+                        allOf(
+                                hasSibling(withText(R.string.eng_an_noor)),
+                                hasSibling(withText(R.string.an_noor))
+                        )
+                ))
+                .perform(longClick())
+
+        Helpers.shareTheNametWith("Mama",device)
+    }
+
+    @Test
+    fun scroll_to_al_haadi() {
+        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(93))
+
+        onView(withText("Al-Haadi"))
+                .check(matches(
+                        allOf(
+                                hasSibling(withText(R.string.eng_al_haadi)),
+                                hasSibling(withText(R.string.al_haadi))
+                        )
+                ))
+                .perform(longClick())
+
+        device.findObject(UiSelector().text("Mama")).click()
+        device.pressEnter()
+        device.findObject(UiSelector().description("Send")).click()
+    }
+
+    @Test
+    fun scroll_to_al_badee() {
+        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(94))
+
+        onView(withText("Al-Badee'"))
+                .check(matches(
+                        allOf(
+                                hasSibling(withText(R.string.al_badee)),
+                                hasSibling(withText(R.string.eng_al_badee))
+                        )
+                ))
+                .perform(longClick())
+
+        device.findObject(UiSelector().text("Mama")).click()
+        device.pressEnter()
+        device.findObject(UiSelector().description("Send")).click()
+    }
+
+    @Test
     fun test_ui_automator() {
-        val device = UiDevice.getInstance(getInstrumentation())
 
         device.pressHome()
         device.sleep()
@@ -675,5 +762,10 @@ class ListsTests() : BaseTestClass() {
         recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(lastIndex))
 
         onView(withText(lastElementTransliteration)).perform(longClick())
+    }
+
+    @After
+    fun tearDown() {
+
     }
 }

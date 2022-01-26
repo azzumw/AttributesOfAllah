@@ -99,7 +99,12 @@ class DataSource {
                 Attribute(context.getString(R.string.eng_al_jaami),context.getString(R.string.trans_al_jaami),context.getString(R.string.al_jaami)),
                 Attribute(context.getString(R.string.eng_al_ganiyy),context.getString(R.string.trans_al_ganiyy),context.getString(R.string.al_ganiyy)),
                 Attribute(context.getString(R.string.eng_al_mugni),context.getString(R.string.trans_al_mugni),context.getString(R.string.al_mugni)),
-                Attribute(context.getString(R.string.trans_al_maani),context.getString(R.string.eng_al_maani),context.getString(R.string.al_maani))
+                Attribute(context.getString(R.string.trans_al_maani),context.getString(R.string.eng_al_maani),context.getString(R.string.al_maani)),
+                Attribute(context.getString(R.string.trans_ad_dhaar),context.getString(R.string.eng_ad_dhaar),context.getString(R.string.ad_dhaar)),
+                Attribute(context.getString(R.string.trans_an_naafi),context.getString(R.string.eng_an_naafi),context.getString(R.string.an_naafi)),
+                Attribute(context.getString(R.string.trans_an_noor),context.getString(R.string.eng_an_noor),context.getString(R.string.an_noor)),
+                Attribute(context.getString(R.string.trans_al_haadi),context.getString(R.string.eng_al_haadi),context.getString(R.string.al_haadi)),
+                Attribute(context.getString(R.string.trans_al_badee),context.getString(R.string.eng_al_badee),context.getString(R.string.al_badee))
 
 
 
