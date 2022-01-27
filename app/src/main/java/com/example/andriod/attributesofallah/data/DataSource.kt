@@ -104,7 +104,11 @@ class DataSource {
                 Attribute(context.getString(R.string.trans_an_naafi),context.getString(R.string.eng_an_naafi),context.getString(R.string.an_naafi)),
                 Attribute(context.getString(R.string.trans_an_noor),context.getString(R.string.eng_an_noor),context.getString(R.string.an_noor)),
                 Attribute(context.getString(R.string.trans_al_haadi),context.getString(R.string.eng_al_haadi),context.getString(R.string.al_haadi)),
-                Attribute(context.getString(R.string.trans_al_badee),context.getString(R.string.eng_al_badee),context.getString(R.string.al_badee))
+                Attribute(context.getString(R.string.trans_al_badee),context.getString(R.string.eng_al_badee),context.getString(R.string.al_badee)),
+                Attribute(context.getString(R.string.trans_al_baaqee),context.getString(R.string.eng_al_baaqee),context.getString(R.string.al_baaqee)),
+                Attribute(context.getString(R.string.trans_al_waarith),context.getString(R.string.eng_al_waarith),context.getString(R.string.al_waarith)),
+                Attribute(context.getString(R.string.trans_ar_rasheed),context.getString(R.string.eng_ar_rasheed),context.getString(R.string.ar_rasheed)),
+                Attribute(context.getString(R.string.trans_as_saboor),context.getString(R.string.eng_as_saboor),context.getString(R.string.as_saboor))
 
 
 

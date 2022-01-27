@@ -101,6 +101,10 @@
     <string name="eng_an_noor">The Light</string>
     <string name="eng_al_haadi">The Guide</string>
     <string name="eng_al_badee">The Originator</string>
+    <string name="eng_al_baaqee">The Everlasting</string>
+    <string name="eng_al_waarith">The Inheritor</string>
+    <string name="eng_ar_rasheed">The Teacher</string>
+    <string name="eng_as_saboor">The Patient</string>
 
 
     <!--    Transliteration-->
@@ -199,6 +203,10 @@
     <string name="trans_an_noor">An-Noor</string>
     <string name="trans_al_haadi">Al-Haadi</string>
     <string name="trans_al_badee">Al-Badee\'</string>
+    <string name="trans_al_baaqee">Al-Baaqee</string>
+    <string name="trans_al_waarith">Al-Waarith</string>
+    <string name="trans_ar_rasheed">Ar-Rasheed</string>
+    <string name="trans_as_saboor">As-Saboor</string>
 
     <!--    Arabic Attributes-->
     <string name="ar_rahman">الُرَّحْمَن</string>
@@ -264,5 +272,9 @@
     <string name="an_noor">النُّورُ</string>
     <string name="al_haadi">الْهَادِي</string>
     <string name="al_badee">الْبَدِيعُ</string>
+    <string name="al_baaqee">اَلْبَاقِي</string>
+    <string name="al_waarith">الْوَارِثُ</string>
+    <string name="ar_rasheed">الرَّشِيدُ</string>
+    <string name="as_saboor">الصَّبُورُ</string>
 
 </resources>

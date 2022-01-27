@@ -547,14 +547,14 @@ class ListsTests() : BaseTestClass() {
 
     @Test
     fun scroll_to_ar_raoof() {
-        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(82))
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(82))
 
         onView(withText("Ar-Ra'oof")).check(matches(allOf(hasSibling(withText(R.string.ar_raoof)), hasSibling(withText("The Most Kind"))))).perform(longClick())
     }
 
     @Test
     fun scroll_to_maalik_ul_mulk() {
-        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(83))
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(83))
 
         onView(withText(equalToIgnoringCase("Malik-ul-mulk"))).check(matches(allOf(hasSibling(withText("The Master of Dominion")), hasSibling(withText(R.string.malik_ul_mulk)))))
                 .perform(longClick())
@@ -562,7 +562,7 @@ class ListsTests() : BaseTestClass() {
 
     @Test
     fun scroll_to_dhul_jallali_wal_ikraam() {
-        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(84))
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(84))
 
         onView(withText(equalToIgnoringCase("Dhul Jalaali Wal Ikraam")))
                 .check(matches(allOf(hasSibling(withText(R.string.eng_dhul_jalaali_wal_ikraam)), hasSibling(withText(R.string.dhul_jalaali_wal_ikraam)))))
@@ -572,7 +572,7 @@ class ListsTests() : BaseTestClass() {
 
     @Test
     fun scroll_to_al_muqsit() {
-        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(85))
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(85))
 
         onView(withText(equalToIgnoringCase("Al-muqsit")))
                 .check(matches
@@ -587,7 +587,7 @@ class ListsTests() : BaseTestClass() {
 
     @Test
     fun scroll_to_al_jaami() {
-        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(86))
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(86))
 
         onView(withText("Al-Jaami'"))
                 .check(matches(allOf(
@@ -599,7 +599,7 @@ class ListsTests() : BaseTestClass() {
 
     @Test
     fun scroll_to_al_ghani() {
-        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(87))
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(87))
 
         onView(withText("Al-Ghaniyy"))
                 .check(matches(
@@ -612,7 +612,7 @@ class ListsTests() : BaseTestClass() {
 
     @Test
     fun scroll_to_al_mughni() {
-        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(88))
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(88))
 
         onView(withText(R.string.trans_al_mugni))
                 .check(matches(
@@ -647,7 +647,7 @@ class ListsTests() : BaseTestClass() {
     @Test
     fun scroll_to_ad_dhaar() {
 
-        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(90))
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(90))
 
         onView(withText(R.string.trans_ad_dhaar))
                 .check(matches(
@@ -663,7 +663,7 @@ class ListsTests() : BaseTestClass() {
 
     @Test
     fun scroll_to_an_naafi() {
-        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(91))
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(91))
 
         onView(withText(R.string.trans_an_naafi))
                 .check(matches(
@@ -678,7 +678,7 @@ class ListsTests() : BaseTestClass() {
 
     @Test
     fun scroll_to_an_noor() {
-        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(92))
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(92))
 
         onView(withText("An-Noor"))
                 .check(matches(
@@ -694,7 +694,7 @@ class ListsTests() : BaseTestClass() {
 
     @Test
     fun scroll_to_al_haadi() {
-        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(93))
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(93))
 
         onView(withText("Al-Haadi"))
                 .check(matches(
@@ -712,7 +712,7 @@ class ListsTests() : BaseTestClass() {
 
     @Test
     fun scroll_to_al_badee() {
-        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(94))
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(94))
 
         onView(withText("Al-Badee'"))
                 .check(matches(
@@ -726,7 +726,81 @@ class ListsTests() : BaseTestClass() {
         device.findObject(UiSelector().text("Mama")).click()
         device.pressEnter()
         device.findObject(UiSelector().description("Send")).click()
+
     }
+
+    @Test
+    fun scroll_to_al_baaqee() {
+        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(95))
+
+        onView(withText("Al-Baaqee"))
+                .check(matches(
+                        allOf(
+                                hasSibling(withText(R.string.al_baaqee)),
+                                hasSibling(withText(R.string.eng_al_baaqee))
+                        )
+                ))
+                .perform(longClick())
+
+        device.findObject(UiSelector().text("Mama")).click()
+
+        device.findObject(UiSelector().description("Send")).click()
+    }
+
+    @Test
+    fun scroll_to_al_waarith() {
+        recyclerView.perform(RecyclerViewActions.scrollToPosition<ItemAdapter.ItemViewHolder>(96))
+
+        onView(withText("Al-Waarith"))
+                .check(matches(
+                        allOf(
+                                hasSibling(withText(R.string.al_waarith)),
+                                hasSibling(withText(R.string.eng_al_waarith))
+                        )
+                ))
+                .perform(longClick())
+
+        device.findObject(UiSelector().text("Mama")).click()
+
+        device.findObject(UiSelector().description("Send")).click()
+    }
+
+    @Test
+    fun scroll_to_ar_rasheed() {
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(97))
+
+        onView(withText("Ar-Rasheed"))
+                .check(matches(
+                        allOf(
+                                hasSibling(withText("The Teacher")),
+                                hasSibling(withText(R.string.ar_rasheed))
+                        )
+                ))
+                .perform(longClick())
+
+        device.findObject(UiSelector().text("Mama")).click()
+
+        device.findObject(UiSelector().description("Send")).click()
+    }
+
+    @Test
+    fun scroll_to_as_saboor() {
+        recyclerView.perform(scrollToPosition<ItemAdapter.ItemViewHolder>(98))
+
+        onView(withText("As-Saboor"))
+                .check(matches(
+                        allOf(
+                                hasSibling(withText(R.string.as_saboor)),
+                                hasSibling(withText(R.string.eng_as_saboor))
+                        )
+                ))
+                .perform(longClick())
+
+        device.findObject(UiSelector().text("Mama")).click()
+
+        device.findObject(UiSelector().description("Send")).click()
+    }
+
 
     @Test
     fun test_ui_automator() {
@@ -753,6 +827,7 @@ class ListsTests() : BaseTestClass() {
                 .check(matches(hasDescendant(withText(lastElementArabic))))
 
     }
+
 
     @Test
     fun scrollto_and_longClick_lastElement() {
