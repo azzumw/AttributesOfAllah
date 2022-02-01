@@ -16,15 +16,13 @@ import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.platform.app.InstrumentationRegistry.getInstrumentation
-import androidx.test.uiautomator.By
-import androidx.test.uiautomator.BySelector
-import androidx.test.uiautomator.UiDevice
-import androidx.test.uiautomator.UiSelector
+import androidx.test.uiautomator.*
 import com.example.andriod.attributesofallah.adapter.ItemAdapter
 import com.example.andriod.attributesofallah.data.DataSource
 import org.hamcrest.Matchers.*
 import org.junit.After
 import org.junit.Before
+import org.junit.BeforeClass
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.w3c.dom.Text
@@ -40,13 +38,33 @@ import org.w3c.dom.Text
 class ListsTests() : BaseTestClass() {
 
     private val recyclerView = viewWithId(R.id.recycler_view)
-    private lateinit var device : UiDevice
+//    private lateinit var device : UiDevice
 
+    companion object{
+        private const val shellCommandAnimatorOff = "settings put global animator_duration_scale 0.0"
+        private const val shellCommandTransitionOff = "settings put global transition_animation_scale 0.0"
+        private const val shellCommandWindowOff = "settings put global animator_animation_scale 0.0"
+        private const val shellCommandTouchAndDelay = "settings put secure long_press_timeout 1500"
+        private const val shellcommandVirtualKeyBoardOff = "settings put secure show_ime_with_hard_keyboard 0"
+        private lateinit var uiDevice: UiDevice
+//        private val uiDevice : UiDevice = UiDevice.getInstance(getInstrumentation())
 
+        @BeforeClass
+        @JvmStatic
+        fun setDevicePreferences(){
+            uiDevice = UiDevice.getInstance(getInstrumentation())
+            uiDevice.executeShellCommand(shellCommandAnimatorOff)
+            uiDevice.executeShellCommand(shellCommandTransitionOff)
+            uiDevice.executeShellCommand(shellCommandWindowOff)
+            uiDevice.executeShellCommand(shellCommandTouchAndDelay)
+            uiDevice.executeShellCommand(shellcommandVirtualKeyBoardOff)
+        }
+    }
 
     @Before
     fun setUp() {
-        device = UiDevice.getInstance(getInstrumentation())
+//        device = UiDevice.getInstance(getInstrumentation())
+
     }
 
     @Test
@@ -658,7 +676,7 @@ class ListsTests() : BaseTestClass() {
                 ))
                 .perform(longClick())
 
-        Helpers.shareTheNametWith("Mama",device = device)
+        Helpers.shareTheNametWith("Mama",device = uiDevice)
     }
 
     @Test
@@ -673,7 +691,7 @@ class ListsTests() : BaseTestClass() {
                         )
                 )).perform(longClick())
 
-        Helpers.shareTheNametWith("Mama",device = device)
+        Helpers.shareTheNametWith("Mama",device = uiDevice)
     }
 
     @Test
@@ -689,7 +707,7 @@ class ListsTests() : BaseTestClass() {
                 ))
                 .perform(longClick())
 
-        Helpers.shareTheNametWith("Mama",device)
+        Helpers.shareTheNametWith("Mama", uiDevice)
     }
 
     @Test
@@ -705,9 +723,9 @@ class ListsTests() : BaseTestClass() {
                 ))
                 .perform(longClick())
 
-        device.findObject(UiSelector().text("Mama")).click()
-        device.pressEnter()
-        device.findObject(UiSelector().description("Send")).click()
+        uiDevice.findObject(UiSelector().text("Mama")).click()
+        uiDevice.pressEnter()
+        uiDevice.findObject(UiSelector().description("Send")).click()
     }
 
     @Test
@@ -723,9 +741,9 @@ class ListsTests() : BaseTestClass() {
                 ))
                 .perform(longClick())
 
-        device.findObject(UiSelector().text("Mama")).click()
-        device.pressEnter()
-        device.findObject(UiSelector().description("Send")).click()
+        uiDevice.findObject(UiSelector().text("Mama")).click()
+        uiDevice.pressEnter()
+        uiDevice.findObject(UiSelector().description("Send")).click()
 
     }
 
@@ -742,9 +760,19 @@ class ListsTests() : BaseTestClass() {
                 ))
                 .perform(longClick())
 
-        device.findObject(UiSelector().text("Mama")).click()
 
-        device.findObject(UiSelector().description("Send")).click()
+        val whatsappIcon = UiSelector().text("WhatsApp")
+
+
+        UiScrollable(UiSelector()).scrollForward()
+
+        uiDevice.findObject(whatsappIcon).click()
+
+        uiDevice.findObject(UiSelector().text("Mama")).click()
+
+        repeat(2) {
+            uiDevice.findObject(androidx.test.uiautomator.UiSelector().description("Send")).click()
+        }
     }
 
     @Test
@@ -760,9 +788,27 @@ class ListsTests() : BaseTestClass() {
                 ))
                 .perform(longClick())
 
-        device.findObject(UiSelector().text("Mama")).click()
+        val whatsappIcon = UiSelector().text("WhatsApp")
 
-        device.findObject(UiSelector().description("Send")).click()
+
+        UiScrollable(UiSelector()).scrollForward()
+
+        uiDevice.findObject(whatsappIcon).click()
+        uiDevice.findObject(UiSelector().description("Search")).click()
+        val searchBox = uiDevice.findObject(UiSelector().resourceId("com.whatsapp:id/search_src_text"))
+        searchBox.text = "Mama"
+
+        uiDevice.findObject(UiSelector().text("Mama").className(TextView::class.java)).click()
+
+        uiDevice.findObject(UiSelector().description("Send")).click()
+
+        val messageBox = uiDevice.findObject(UiSelector().resourceId("com.whatsapp:id/entry"))
+//        messageBox.click()
+
+        uiDevice.pressEnter()
+        messageBox.text += " testing"
+
+        uiDevice.findObject(UiSelector().description("Send")).click()
     }
 
     @Test
@@ -778,9 +824,9 @@ class ListsTests() : BaseTestClass() {
                 ))
                 .perform(longClick())
 
-        device.findObject(UiSelector().text("Mama")).click()
+        uiDevice.findObject(UiSelector().text("Mama")).click()
 
-        device.findObject(UiSelector().description("Send")).click()
+        uiDevice.findObject(UiSelector().description("Send")).click()
     }
 
     @Test
@@ -796,19 +842,19 @@ class ListsTests() : BaseTestClass() {
                 ))
                 .perform(longClick())
 
-        device.findObject(UiSelector().text("Mama")).click()
+        uiDevice.findObject(UiSelector().text("Mama")).click()
 
-        device.findObject(UiSelector().description("Send")).click()
+        uiDevice.findObject(UiSelector().description("Send")).click()
     }
 
 
     @Test
     fun test_ui_automator() {
 
-        device.pressHome()
-        device.sleep()
-        device.wakeUp()
-        device.openNotification()
+        uiDevice.pressHome()
+        uiDevice.sleep()
+        uiDevice.wakeUp()
+        uiDevice.openNotification()
 
 
     }
@@ -843,4 +889,6 @@ class ListsTests() : BaseTestClass() {
     fun tearDown() {
 
     }
+
+
 }
