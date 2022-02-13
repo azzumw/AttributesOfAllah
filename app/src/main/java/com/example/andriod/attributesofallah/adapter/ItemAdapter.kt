@@ -22,7 +22,7 @@ class ItemAdapter(private val context: Context): RecyclerView.Adapter<ItemAdapte
     }
 
 
-    val myData = DataSource().loadAttributes(context)
+    val myData = DataSource().loadAttributes()
     val numbers = (1..myData.size).toList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
@@ -44,9 +44,9 @@ class ItemAdapter(private val context: Context): RecyclerView.Adapter<ItemAdapte
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
 
         val item = myData[position]
-        holder.englishTextView.text = item.english
-        holder.transliterationtextView.text = item.transliteration
-        holder.arabictextView.text = item.arabic
+        holder.englishTextView.text = context.getString(item.english)
+        holder.transliterationtextView.text = context.getString(item.transliteration)
+        holder.arabictextView.text = context.getString(item.arabic)
         holder.numberText.text = numbers[position].toString()
         holder.itemView.setOnClickListener {
 
@@ -57,16 +57,16 @@ class ItemAdapter(private val context: Context): RecyclerView.Adapter<ItemAdapte
                 action = Intent.ACTION_SEND_MULTIPLE
                 putExtra(
                     Intent.EXTRA_TEXT,
-                    "${item.arabic}\n ${item.transliteration}\n${item.english}"
+                    "${context.getString(item.arabic)}\n ${context.getString(item.transliteration)}\n${context.getString(item.english)}"
                 )
 
                 // (Optional) Here we're setting the title of the content
-                putExtra(Intent.EXTRA_TITLE, "Sharing Name of Allah: ${item.transliteration}")
+                putExtra(Intent.EXTRA_TITLE, "Sharing Name of Allah: ${context.getString(item.transliteration)}")
 
                 type = "text/plain"
             }
 
-            val shareIntent = Intent.createChooser(sendIntent, "NO")
+            val shareIntent = Intent.createChooser(sendIntent, "Share")
             startActivity(context, shareIntent, null)
 
             true

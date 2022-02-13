@@ -1,5 +1,7 @@
 package com.example.andriod.attributesofallah.model
 
-data class Attribute(val english:String, val transliteration:String,val arabic:String) {
+import androidx.annotation.StringRes
+
+data class Attribute(@StringRes val english:Int, @StringRes val transliteration:Int, @StringRes  val arabic:Int) {
 
 }

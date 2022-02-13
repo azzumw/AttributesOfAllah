@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "656873747767",
+    "project_id": "attributesofallah",
+    "storage_bucket": "attributesofallah.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:656873747767:android:0c4809b1406c1cd67b16b2",
+        "android_client_info": {
+          "package_name": "com.example.andriod.attributesofallah"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "656873747767-be3pn0gf0ct5muo7jc86nhmdv7ej7shg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXyYiH5iHQZnEiCqaUN06mDJ6WGTKIaIU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "656873747767-be3pn0gf0ct5muo7jc86nhmdv7ej7shg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
