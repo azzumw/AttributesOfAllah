@@ -9,5 +9,18 @@
         android:id="@+id/nameListFragment"
         android:name="com.example.andriod.attributesofallah.NameListFragment"
         android:label="@string/app_name"
-        tools:layout="@layout/fragment_name_list" />
+        tools:layout="@layout/fragment_name_list" >
+        <action
+            android:id="@+id/action_nameListFragment_to_nameDetailFragment"
+            app:destination="@id/nameDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nameDetailFragment"
+        android:name="com.example.andriod.attributesofallah.NameDetailFragment"
+        android:label="fragment_name_detail"
+        tools:layout="@layout/fragment_name_detail" >
+        <argument
+            android:name="attribute"
+            app:argType="com.example.andriod.attributesofallah.model.Attribute" />
+    </fragment>
 </navigation>

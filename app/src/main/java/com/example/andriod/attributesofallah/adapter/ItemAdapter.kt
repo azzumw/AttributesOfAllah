@@ -7,20 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.content.ContextCompat.startActivity
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.example.andriod.attributesofallah.NameListFragmentDirections
 import com.example.andriod.attributesofallah.R
 import com.example.andriod.attributesofallah.data.DataSource
 
 class ItemAdapter(private val context: Context): RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
-
-//     private val  context = context
-
-    private val mainRecipeCustomOnClickHandler: MainRecipeCustomOnClickHandler? = null
-
-    interface MainRecipeCustomOnClickHandler {
-        fun onClickHandler()
-    }
-
 
     val myData = DataSource().loadAttributes()
     val numbers = (1..myData.size).toList()
@@ -44,13 +37,17 @@ class ItemAdapter(private val context: Context): RecyclerView.Adapter<ItemAdapte
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
 
         val item = myData[position]
+
         holder.englishTextView.text = context.getString(item.english)
         holder.transliterationtextView.text = context.getString(item.transliteration)
         holder.arabictextView.text = context.getString(item.arabic)
         holder.numberText.text = numbers[position].toString()
-        holder.itemView.setOnClickListener {
 
+        holder.itemView.setOnClickListener {
+            val action = NameListFragmentDirections.actionNameListFragmentToNameDetailFragment(item)
+            holder.itemView.findNavController().navigate(action)
         }
+
         holder.itemView.setOnLongClickListener {
 
             val sendIntent: Intent = Intent().apply {
@@ -74,15 +71,12 @@ class ItemAdapter(private val context: Context): RecyclerView.Adapter<ItemAdapte
 
     }
 
-    class ItemViewHolder(private val view: View): RecyclerView.ViewHolder(view),View.OnClickListener {
+    class ItemViewHolder(private val view: View): RecyclerView.ViewHolder(view) {
         val englishTextView :TextView= view.findViewById(R.id.englishtextView)
         val transliterationtextView: TextView = view.findViewById(R.id.translitration)
         val arabictextView: TextView = view.findViewById(R.id.arabictextView)
         val numberText : TextView = view.findViewById(R.id.numberTextView)
 
-        override fun onClick(p0: View?) {
-
-        }
     }
 }
 
