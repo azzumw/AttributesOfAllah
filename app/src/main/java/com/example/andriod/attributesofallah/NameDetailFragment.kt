@@ -20,7 +20,7 @@ class NameDetailFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         arguments.let {
-            name = it?.getParcelable("attribute")!!
+            name = it?.getParcelable("attribute") ?: Attribute(R.string.eng_ar_raheem,R.string.trans_ar_raheem,R.string.ar_raheem)
         }
     }
 

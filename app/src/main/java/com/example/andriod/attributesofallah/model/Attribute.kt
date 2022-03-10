@@ -32,5 +32,4 @@ data class Attribute(@StringRes val english:Int, @StringRes val transliteration:
             return arrayOfNulls(size)
         }
     }
-
 }
