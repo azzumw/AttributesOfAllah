@@ -12,7 +12,10 @@ The concept of the app is relatively straight-forward. It lists the 'Attributes'
 The focus of the project is predominantly writing Instrumentation (UI) tests using Espresso. 
 
 #### RecyclerView ####
-[ListsTest.kt](/app/src/androidTest/java/com/example/andriod/attributesofallah/ListsTests.kt "ListsTest title") has extensive UI RecyclerView tests which test a specific (name of Allah) at a certain position in the recycler view, asserts/checks whether it has certain sibling text that is displayed. It then performs a longClick() operation to send an intent. 
+[ListsTest.kt](/app/src/androidTest/java/com/example/andriod/attributesofallah/ListsTests.kt "ListsTest title") has extensive UI RecyclerView tests which test a specific (name of Allah) at a certain position in the recycler view, asserts/checks whether it has certain sibling text that is displayed. It then performs a longClick() operation to send an intent.
+
+#### Navigation Jetpack ####
+[NavigationTests.kt](/app/src/androidTest/java/com/example/andriod/attributesofallah/NavigationTests.kt "NavigationTests title") contains a single test to assert that clicking on a name navigates to the correct target destination fragment. This is achieved with the help navigation testing and fragment dependencies. 
 
 #### UiAutomator ####
 I have also attemtped to use UiAutomator API to extend the above functionality to enable a name to be shared to a WhatsApp contact. 
