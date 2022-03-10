@@ -1,5 +1,5 @@
 # AttributesOfAllah
-This is my personal project aimed at Android Instrumentation testing.
+This is my personal project aimed at writing _Android Instrumentation_ tests.
 
 Please note: this project is a work in progress. 
 
