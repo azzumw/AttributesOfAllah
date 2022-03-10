@@ -3,9 +3,9 @@ This is my personal project aimed at Android Instrumentation testing.
 
 Please note: this project is a work in progress. 
 
-### What is the app about?###
+### What is the app about? ###
 
-The concept of the app is straight-forward. It lists the 'Attributes'(or names) of Allah in a RecyclerView.
+The concept of the app is relatively straight-forward. It lists the 'Attributes'(or names) of Allah in a RecyclerView.
 
 ### Purpose ###
 
