@@ -27,4 +27,4 @@ There are a couple of other tests to test Intents using intended() function as w
 ### More Information ###
 This project also aims to apply some of the concepts learnt from [Android Basics In Kotlin](https://github.com/azzumw/GoogleDeveloper) namely: Jetpack Navigation Component using fragments. 
 
-I intend to extend the functioanality of the app by adding audio clip to each Attribute instance so that the user can hear the pronunciation of the word.
+I intend to extend the functionality of the app by adding audio clip to each Attribute instance so that the user can hear the pronunciation of each word.
