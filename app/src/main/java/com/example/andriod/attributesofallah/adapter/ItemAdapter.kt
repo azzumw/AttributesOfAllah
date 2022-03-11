@@ -13,7 +13,8 @@ import com.example.andriod.attributesofallah.NameListFragmentDirections
 import com.example.andriod.attributesofallah.R
 import com.example.andriod.attributesofallah.data.DataSource
 
-class ItemAdapter(private val context: Context): RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
+class ItemAdapter(private val context: Context) :
+    RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
     val myData = DataSource().loadAttributes()
     val numbers = (1..myData.size).toList()
@@ -54,11 +55,18 @@ class ItemAdapter(private val context: Context): RecyclerView.Adapter<ItemAdapte
                 action = Intent.ACTION_SEND_MULTIPLE
                 putExtra(
                     Intent.EXTRA_TEXT,
-                    "${context.getString(item.arabic)}\n ${context.getString(item.transliteration)}\n${context.getString(item.english)}"
+                    "${context.getString(item.arabic)}\n ${context.getString(item.transliteration)}\n${
+                        context.getString(
+                            item.english
+                        )
+                    }"
                 )
 
                 // (Optional) Here we're setting the title of the content
-                putExtra(Intent.EXTRA_TITLE, "Sharing Name of Allah: ${context.getString(item.transliteration)}")
+                putExtra(
+                    Intent.EXTRA_TITLE,
+                    "Sharing Name of Allah: ${context.getString(item.transliteration)}"
+                )
 
                 type = "text/plain"
             }
@@ -71,11 +79,11 @@ class ItemAdapter(private val context: Context): RecyclerView.Adapter<ItemAdapte
 
     }
 
-    class ItemViewHolder(private val view: View): RecyclerView.ViewHolder(view) {
-        val englishTextView :TextView= view.findViewById(R.id.englishtextView)
+    class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
+        val englishTextView: TextView = view.findViewById(R.id.englishtextView)
         val transliterationtextView: TextView = view.findViewById(R.id.translitration)
         val arabictextView: TextView = view.findViewById(R.id.arabictextView)
-        val numberText : TextView = view.findViewById(R.id.numberTextView)
+        val numberText: TextView = view.findViewById(R.id.numberTextView)
 
     }
 }

@@ -19,5 +19,4 @@ class NameListFragmentTest {
 
         recyclerView.perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(27)).perform(ViewActions.longClick())
     }
-
 }

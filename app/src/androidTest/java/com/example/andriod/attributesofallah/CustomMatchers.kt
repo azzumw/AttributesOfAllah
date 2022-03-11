@@ -9,11 +9,11 @@ import org.hamcrest.Matcher
 
 object CustomMatchers {
 
-    fun withToolbarName(expectedName : CharSequence) : Matcher<View>{
-        return object : BoundedMatcher<View,Toolbar>(Toolbar::class.java){
+    fun withToolbarName(expectedName: CharSequence): Matcher<View> {
+        return object : BoundedMatcher<View, Toolbar>(Toolbar::class.java) {
             override fun describeTo(description: Description?) {
 
-                description?.appendText( "$expectedName")
+                description?.appendText("$expectedName")
             }
 
             override fun matchesSafely(item: Toolbar?): Boolean {
