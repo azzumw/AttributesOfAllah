@@ -41,6 +41,6 @@ class NameDetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val transliteration = context?.resources?.getString(name.transliteration)
-        binding.mainTextView.text = transliteration
+        binding.attrName.text = transliteration
     }
 }
