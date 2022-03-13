@@ -13,11 +13,12 @@ import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
 open class BaseTestClass {
-    @get:Rule
-    val activityRule = ActivityScenarioRule(MainActivity::class.java)
+//    @get:Rule
+//    val activityRule = ActivityScenarioRule(MainActivity::class.java)
 
     @get:Rule
     val rule = IntentsTestRule(MainActivity::class.java)
+
     lateinit var appContext : Context
 
     @Before

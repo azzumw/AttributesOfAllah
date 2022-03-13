@@ -2,11 +2,14 @@ package com.example.andriod.attributesofallah.model
 
 import android.os.Parcel
 import android.os.Parcelable
+import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 
-data class Attribute(@StringRes val english:Int, @StringRes val transliteration:Int, @StringRes  val arabic:Int) :
+data class Attribute(
+    @StringRes val english:Int, @StringRes val transliteration:Int, @StringRes  val arabic:Int,@DrawableRes val imageResId:Int) :
     Parcelable {
     constructor(parcel: Parcel) : this(
+        parcel.readInt(),
         parcel.readInt(),
         parcel.readInt(),
         parcel.readInt()
@@ -17,6 +20,7 @@ data class Attribute(@StringRes val english:Int, @StringRes val transliteration:
         parcel.writeInt(english)
         parcel.writeInt(transliteration)
         parcel.writeInt(arabic)
+        parcel.writeInt(imageResId)
     }
 
     override fun describeContents(): Int {

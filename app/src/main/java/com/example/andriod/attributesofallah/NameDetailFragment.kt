@@ -22,7 +22,8 @@ class NameDetailFragment : Fragment() {
             name = it?.getParcelable("attribute") ?: Attribute(
                 R.string.eng_ar_raheem,
                 R.string.trans_ar_raheem,
-                R.string.ar_raheem
+                R.string.ar_raheem,
+                R.drawable.al_maani
             )
         }
     }
@@ -42,5 +43,6 @@ class NameDetailFragment : Fragment() {
 
         val transliteration = context?.resources?.getString(name.transliteration)
         binding.attrName.text = transliteration
+        binding.attrImage.setImageResource(name.imageResId )
     }
 }

@@ -16,8 +16,8 @@ import com.example.andriod.attributesofallah.data.DataSource
 class ItemAdapter(private val context: Context) :
     RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
-    val myData = DataSource().loadAttributes()
-    val numbers = (1..myData.size).toList()
+    private val myData = DataSource().loadAttributes()
+    private val numbers = (1..myData.size).toList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
 
