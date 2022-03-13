@@ -106,17 +106,17 @@ class DataSource {
                 Attribute(english = R.string.eng_al_jaami, transliteration = R.string.trans_al_jaami, arabic = R.string.al_jaami),
                 Attribute(english = R.string.eng_al_ganiyy, transliteration = R.string.trans_al_ganiyy, arabic = R.string.al_ganiyy),
                 Attribute(english = R.string.eng_al_mugni, transliteration = R.string.trans_al_mugni, arabic = R.string.al_mugni),
-                Attribute(english = R.string.trans_al_maani, transliteration = R.string.eng_al_maani,arabic = R.string.al_maani),
+                Attribute(english = R.string.eng_al_maani, transliteration = R.string.trans_al_maani,arabic = R.string.al_maani),
 
-                Attribute(english = R.string.trans_ad_dhaar, transliteration = R.string.eng_ad_dhaar, arabic = R.string.ad_dhaar),
-                Attribute(english = R.string.trans_an_naafi,R.string.eng_an_naafi,R.string.an_naafi),
-                Attribute(english = R.string.trans_an_noor, transliteration = R.string.eng_an_noor, arabic = R.string.an_noor),
-                Attribute(english = R.string.trans_al_haadi, transliteration = R.string.eng_al_haadi, arabic = R.string.al_haadi),
-                Attribute(english = R.string.trans_al_badee, transliteration = R.string.eng_al_badee, arabic = R.string.al_badee),
-                Attribute(english = R.string.trans_al_baaqee, transliteration = R.string.eng_al_baaqee, arabic = R.string.al_baaqee),
-                Attribute(english = R.string.trans_al_waarith, transliteration = R.string.eng_al_waarith, arabic = R.string.al_waarith),
-                Attribute(english = R.string.trans_ar_rasheed, transliteration = R.string.eng_ar_rasheed, arabic = R.string.ar_rasheed),
-                Attribute(english = R.string.trans_as_saboor, transliteration = R.string.eng_as_saboor, arabic = R.string.as_saboor)
+                Attribute(english = R.string.eng_ad_dhaar, transliteration = R.string.eng_ad_dhaar, arabic = R.string.ad_dhaar),
+                Attribute(english = R.string.eng_an_naafi,R.string.trans_an_naafi,R.string.an_naafi),
+                Attribute(english = R.string.eng_an_noor, transliteration = R.string.trans_an_noor, arabic = R.string.an_noor),
+                Attribute(english = R.string.eng_al_haadi, transliteration = R.string.trans_al_haadi, arabic = R.string.al_haadi),
+                Attribute(english = R.string.eng_al_badee, transliteration = R.string.trans_al_badee, arabic = R.string.al_badee),
+                Attribute(english = R.string.eng_al_baaqee, transliteration = R.string.trans_al_baaqee, arabic = R.string.al_baaqee),
+                Attribute(english = R.string.eng_al_waarith, transliteration = R.string.trans_al_waarith, arabic = R.string.al_waarith),
+                Attribute(english = R.string.eng_ar_rasheed, transliteration = R.string.trans_ar_rasheed, arabic = R.string.ar_rasheed),
+                Attribute(english = R.string.eng_as_saboor, transliteration = R.string.trans_as_saboor, arabic = R.string.as_saboor)
                 )
     }
 }

@@ -17,10 +17,13 @@
     <fragment
         android:id="@+id/nameDetailFragment"
         android:name="com.example.andriod.attributesofallah.NameDetailFragment"
-        android:label="fragment_name_detail"
-        tools:layout="@layout/fragment_name_detail" >
+        android:label="{title}"
+        tools:layout="@layout/fragment_name_detail">
         <argument
             android:name="attribute"
             app:argType="com.example.andriod.attributesofallah.model.Attribute" />
+        <argument
+            android:name="title"
+            app:argType="string" />
     </fragment>
 </navigation>

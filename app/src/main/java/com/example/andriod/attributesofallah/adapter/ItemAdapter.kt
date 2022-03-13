@@ -45,7 +45,7 @@ class ItemAdapter(private val context: Context) :
         holder.numberText.text = numbers[position].toString()
 
         holder.itemView.setOnClickListener {
-            val action = NameListFragmentDirections.actionNameListFragmentToNameDetailFragment(item)
+            val action = NameListFragmentDirections.actionNameListFragmentToNameDetailFragment(item,context.getString(item.english))
             holder.itemView.findNavController().navigate(action)
         }
 
